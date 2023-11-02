@@ -1,0 +1,3 @@
+[submodule "src/main/resources/plugin-manager-internal-library"]
+	path = src/main/resources/plugin-manager-internal-library
+	url = git@hq.advancednavigation.com.au:cgc/plugin-manager-internal-library.git
