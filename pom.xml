@@ -14,21 +14,29 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>
 
+    <dependencies>
+        <dependency>
+            <groupId>com.fasterxml.jackson.core</groupId>
+            <artifactId>jackson-databind</artifactId>
+            <version>2.12.5</version> <!-- Use the version that matches your project -->
+        </dependency>
+    </dependencies>
+
     <build>
         <plugins>
             <plugin>
                 <groupId>org.jsonschema2pojo</groupId>
                 <artifactId>jsonschema2pojo-maven-plugin</artifactId>
-                <version>1.1.1</version> <!-- Use the latest version available -->
+                <version>1.2.1</version> <!-- Use the latest version available -->
                 <executions>
                     <execution>
                         <goals>
                             <goal>generate</goal>
                         </goals>
                         <configuration>
-                            <sourceDirectory>${project.basedir}/src/main/resources</sourceDirectory>
+                            <sourceDirectory>${project.basedir}/src/main/resources/plugin-manager-internal-library/cgc_model/jsonschema</sourceDirectory>
                             <outputDirectory>${project.build.directory}/generated-sources</outputDirectory>
-                            <targetPackage>com.example.generated</targetPackage>
+                            <targetPackage>com.advancednavigation.generated</targetPackage>
                             <useCommonsLang3>true</useCommonsLang3>
                         </configuration>
                     </execution>
